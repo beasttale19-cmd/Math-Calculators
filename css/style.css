@@ -6,6 +6,8 @@
 .container {
     display:flex;
     align-items: center;
+    justify-content: center;
+    width:100vw;
     flex-wrap:wrap;
 }
 
@@ -13,14 +15,31 @@
     background-color:rgb(28, 1, 80);
     border:2px solid white;
     border-radius:7px;
-    margin: 15px;
+    margin: 10px 15px;
     width:250px;
     height:250px;
     display:flex;
     align-items: center;
     justify-content: center;
+    transition:0.3s;
 }
-.container div > * {
+
+.container div:hover {
+    background-color:rgb(39, 11, 90);
+    cursor:pointer;
+    transform:scale(1.01);
+}
+
+.container div > * > * {
     width:50%;
     font-size:1.5em;
+}
+
+.container div > a {
+    width:100%;
+    height:100%;
+    font-size:1.5em;
+    display:flex;
+    align-items:center;
+    justify-content: center;
 }
