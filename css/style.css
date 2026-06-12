@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display:flex;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+.container div {
+    background-color:rgb(28, 1, 80);
+    border:2px solid white;
+    border-radius:7px;
+    margin: 15px;
+    width:250px;
+    height:250px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.container div > * {
+    width:50%;
+    font-size:1.5em;
+}
