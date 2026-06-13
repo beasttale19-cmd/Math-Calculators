@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Math Calculator</title>
+        <link rel="stylesheet" href="../css/font.css">
+        <link rel="icon" href="../Images/math.jpg" type="image/jpg">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .container {
+                width:100vw;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                height:70vh;
+            }
+
+            .calculate {
+                background-color:rgba(0, 0, 0, 0.664);
+                border-radius:7px;
+                width:35vw;
+                height:20vw;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex-wrap:wrap;
+                font-size:1.4em;
+            }
+
+            button {
+                margin-top: 3vh;
+                font-size:1.5rem;
+                background-color:rgb(139, 63, 9);
+                color:white;
+            }
+
+            input {
+                height:2em;
+                background-color:black;
+                color:white;
+            }
+
+            input::placeholder {
+                color:rgb(49, 49, 49);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Discount from SP And MP</h1>
+        <hr></hr>
+
+        <div class="container">
+            <div class="calculate">
+                <div class="mp">
+                    <label for="">Marked Price:</label>
+                    <input placeholder="Enter your MP" type="number" id="inMp">
+                </div>
+
+                <div class="sp">
+                    <label for="">Selling Price:</label>
+                    <input placeholder="Enter your SP" type="number" id="inSp">
+                </div>
+                <button id="submit">Submit</button>
+
+                <p id="output" class="output">Your discount is: </p>
+                <p id="output2" class="output">Your discount percent is: </p>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById("submit").onclick = function() {
+                let mp = document.getElementById("inMp").value;
+                let sp = document.getElementById("inSp").value;
+
+                let discount = mp - sp
+
+                document.getElementById("output").textContent = `Your discount is: ${discount.toFixed(0)}`
+
+                let discountPercent = (discount * 100) / mp
+
+                document.getElementById("output2").textContent = `Your discount percent is: ${discountPercent.toFixed(0)}%`
+
+            }
+        </script>
+    </body>
+</html>
