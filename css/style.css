@@ -25,9 +25,8 @@
 }
 
 .container div:hover {
-    background-color:rgb(39, 11, 90);
     cursor:pointer;
-    transform:scale(1.01);
+    transform:scale(1.03);
 }
 
 .container div > * > * {
@@ -43,3 +42,106 @@
     align-items:center;
     justify-content: center;
 }
+
+.discount::after {
+    content: "Discount";
+    position:absolute;
+    color:white;
+    background-color:black;
+    transform: translateY(90px);
+    font-size:20px;
+    opacity:0;
+    transition:0.2s;
+    transition-delay: 0.1s;
+}
+
+.discount:hover::after {
+    visibility:visible;
+    opacity:1;
+}
+
+.area::after {
+    content: "Area";
+    position:absolute;
+    color:white;
+    background-color:black;
+    transform: translateY(90px);
+    font-size:20px;
+    opacity:0;
+    transition:0.2s;
+    transition-delay: 0.1s;
+}
+
+.area:hover::after {
+    visibility:visible;
+    opacity:1;
+}
+
+.perimeter::after {
+    content: "Perimeter";
+    position:absolute;
+    color:white;
+    background-color:black;
+    transform: translateY(90px);
+    font-size:20px;
+    opacity:0;
+    transition:0.2s;
+    transition-delay: 0.1s;
+}
+
+.perimeter:hover::after {
+    visibility:visible;
+    opacity:1;
+}
+
+.prLoss::after {
+    content: "Profit & Loss";
+    position:absolute;
+    color:white;
+    background-color:black;
+    transform: translateY(90px);
+    font-size:20px;
+    opacity:0;
+    transition:0.2s;
+    transition-delay: 0.1s;
+}
+
+.prLoss:hover::after {
+    visibility:visible;
+    opacity:1;
+}
+
+.interest::after {
+    content: "Interest";
+    position:absolute;
+    color:white;
+    background-color:black;
+    transform: translateY(90px);
+    font-size:20px;
+    opacity:0;
+    transition:0.2s;
+    transition-delay: 0.1s;
+}
+
+.interest:hover::after {
+    visibility:visible;
+    opacity:1;
+}
+
+.temperature::after {
+    content: "Temperature";
+    position:absolute;
+    color:white;
+    background-color:black;
+    transform: translateY(90px);
+    font-size:20px;
+    opacity:0;
+    transition:0.2s;
+    transition-delay: 0.1s;
+}
+
+.temperature:hover::after {
+    visibility:visible;
+    opacity:1;
+}
+
