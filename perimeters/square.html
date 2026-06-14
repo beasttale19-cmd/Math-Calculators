@@ -51,32 +51,37 @@
             input::placeholder {
                 color:rgb(49, 49, 49);
             }
-
         </style>
     </head>
     <body>
-        <h1>Calculate Celsius</h1>
+        <h1>Calculate Perimeter of Square</h1>
         <hr></hr>
 
         <div class="container">
             <div class="calculate">
-                <div class="celsius">
-                    <label for="">Fahrenheit:</label>
-                    <input placeholder="Enter the Fahrenheit." type="number" id="inFahrenheit">
+                <div class="l">
+                    <label for="">Length:</label>
+                    <input placeholder="Enter the Length" type="number" id="inLength">
+                </div>
+
+                <div class="unit">
+                    <label for="">Unit:</label>
+                    <input placeholder="Enter Unit. i.e m" type="text" id="inUnit">
                 </div>
                 <button id="submit">Submit</button>
 
-                <p id="output" class="output">Celsius of the place is :</p>
+                <p id="output" class="output">Perimeter:</p>
             </div>
         </div>
 
         <script>
             document.getElementById("submit").onclick = function() {
-                let fahrenheit = document.getElementById("inFahrenheit").value;
+                let l = Number(document.getElementById("inLength").value);
+                let unit = document.getElementById("inUnit").value;
 
-                let celsius = (fahrenheit - 32) / 1.8
+                let perimeter = 4*l
 
-                document.getElementById("output").textContent = `Celsius of the place is : ${celsius.toFixed(2)}°C`
+                let output = document.getElementById("output").textContent = `Perimeter: ${perimeter}${unit}`
             }
         </script>
     </body>

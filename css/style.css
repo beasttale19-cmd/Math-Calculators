@@ -145,3 +145,20 @@
     opacity:1;
 }
 
+.bored {
+    position:absolute;
+    right:0%;
+    bottom:50%;
+    opacity:0.5;
+    transition:0.3s;
+    transition-delay: 0.1s;
+}
+
+.bored:hover{
+    opacity:1;
+}
+
+.bored img {
+    border-radius:100px;
+}
+

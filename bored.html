@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Math Calculator</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/font.css">
+        <link rel="icon" href="Images/math.jpg" type="image/jpg">
+        <style>
+            .container {
+                flex-direction: column;
+            }
+
+            button {
+                font-size:2em;
+                background-color:black;
+                color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center" class="title">Bored!?</h1>
+        <hr>
+
+        <div class="container">
+            <img width=800px" height="200px" src="Images/push-up.png" alt="no-img">
+            <h1>Do Pushups!!</h1>
+            <button id="random">Roll🎲</button>
+            <p>Don't Worry BTW, the pushups will be less than 20 :D</p>
+        </div>
+
+        <script>
+            document.getElementById("random").onclick = function(){
+                pushupsToDo = Math.floor(Math.random() * 20) +1
+
+                window.alert(`You need to do ${pushupsToDo} Pushups💪 right now!`)
+            } 
+        </script>
+    </body>
+</html>

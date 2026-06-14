@@ -51,32 +51,42 @@
             input::placeholder {
                 color:rgb(49, 49, 49);
             }
-
         </style>
     </head>
     <body>
-        <h1>Calculate Celsius</h1>
+        <h1>Calculate Rate of Interest</h1>
         <hr></hr>
 
         <div class="container">
             <div class="calculate">
-                <div class="celsius">
-                    <label for="">Fahrenheit:</label>
-                    <input placeholder="Enter the Fahrenheit." type="number" id="inFahrenheit">
+                <div class="deposit">
+                    <label for="">Deposit Amount:</label>
+                    <input placeholder="Enter Deposit amount" type="number" id="inDeposit">
+                </div>
+
+                <div class="time">
+                    <label for="">Time (in yrs):</label>
+                    <input placeholder="Enter the Time" type="number" id="inTime">
+                </div>
+                
+                <div class="interest">
+                    <label for="">interest:</label>
+                    <input placeholder="Enter the interest" type="number" id="inInterest">
                 </div>
                 <button id="submit">Submit</button>
 
-                <p id="output" class="output">Celsius of the place is :</p>
+                <p id="output" class="output">Rate of interest:</p>
             </div>
         </div>
 
         <script>
             document.getElementById("submit").onclick = function() {
-                let fahrenheit = document.getElementById("inFahrenheit").value;
+                let p = Number(document.getElementById("inDeposit").value);
+                let t = Number(document.getElementById("inTime").value);
+                let i = Number(document.getElementById("inInterest").value);
 
-                let celsius = (fahrenheit - 32) / 1.8
-
-                document.getElementById("output").textContent = `Celsius of the place is : ${celsius.toFixed(2)}°C`
+                let r = Number((i * 100)/(p * t))
+                let output = document.getElementById("output").textContent = `Rate of interest: ${r}%`
             }
         </script>
     </body>
